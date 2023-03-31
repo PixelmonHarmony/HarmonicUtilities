@@ -23,6 +23,7 @@ versions:
   # common
   architectury: 6.5.69
   cobblemon: 1.3.0+1.19.2
+  configurate: 4.1.2
 
   # test
   junit: 5.9.0
@@ -87,6 +88,14 @@ dependencies:
     group: com.cobblemon
     name: mod
     version: { ref: cobblemon }
+  configurateGson:
+    group: org.spongepowered
+    name: configurate-gson
+    version: { ref: configurate }
+  configurateHocon:
+    group: org.spongepowered
+    name: configurate-hocon
+    version: { ref: configurate }
 
   # fabric
   fabricApi:
