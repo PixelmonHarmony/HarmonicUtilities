@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "harmonicutilities",
   "version": "${version}",
-  "name": "CobblemonExtras",
-  "description": "Cobblemon Kotlin Sidemod Template",
+  "name": "Harmonic Utilities",
+  "description": "Pixelmon Harmony's Utilities library",
   "authors": [
     "The Cobblemon Team"
   ],
@@ -15,7 +15,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.examplemod.fabric.ExampleModFabric"
+      "HarmonicUtilitiesModFabric"
     ]
   },
   "depends": {

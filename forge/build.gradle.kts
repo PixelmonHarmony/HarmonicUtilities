@@ -45,13 +45,29 @@ dependencies {
         libs.serializationJson,
         libs.reflect
     ).forEach(::forgeRuntimeLibrary)
+
+    modApi(libs.configurateCore)
+    modApi(libs.configurateHocon)
+    modApi(libs.configurateGson) {
+        exclude("com.google.code.gson") // Use Minecraft's gson
+    }
+    modApi(libs.configurateDfu4) {
+        exclude("com.mojang")
+    }
+    bundle(libs.configurateCore)
+    bundle(libs.configurateHocon)
+    bundle(libs.configurateGson) {
+        exclude("com.google.code.gson") // Use Minecraft's gson
+    }
+    bundle(libs.configurateDfu4) {
+        exclude("com.mojang")
+    }
 }
 
 tasks {
-    shadowJar {
-        exclude("architectury-common.accessWidener")
-        relocate ("com.ibm.icu", "com.cobblemon.mod.relocations.ibm.icu")
-    }
+//    shadowJar {
+//        relocate ("org.spongepowered", "io.github.waterpicker.relocation.spongepowered")
+//    }
 
     processResources {
         inputs.property("version", rootProject.version)

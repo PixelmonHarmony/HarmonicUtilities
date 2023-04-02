@@ -1,4 +1,4 @@
-rootProject.name = "cobblemonextras"
+rootProject.name = "harmonicutilities"
 
 pluginManagement {
     repositories {

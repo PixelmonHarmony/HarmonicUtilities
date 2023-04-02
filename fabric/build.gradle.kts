@@ -40,12 +40,24 @@ dependencies {
         libs.serializationCore,
         libs.serializationJson,
     ).forEach {
-        bundle(it)
         runtimeOnly(it)
+    }
+
+    listOf(
+        libs.configurateHocon,
+        libs.configurateGson,
+        libs.configurateDfu4
+    ).forEach {
+        bundle(it)
+        modApi(it)
     }
 }
 
 tasks {
+    shadowJar {
+        relocate ("org.spongepowered", "io.github.waterpicker.relocation.spongepowered")
+    }
+
     processResources {
         inputs.property("version", rootProject.version)
 

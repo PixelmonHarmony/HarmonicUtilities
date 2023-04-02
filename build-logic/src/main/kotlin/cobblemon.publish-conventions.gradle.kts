@@ -29,7 +29,7 @@ publishing {
             @Suppress("UnstableApiUsage")
             loom.disableDeprecatedPomGeneration(this)
 
-            groupId = "com.cobblemon"
+            groupId = "io.github.waterpicker.harmonicutilities"
             artifactId = project.findProperty("maven.artifactId")?.toString() ?: project.name
             version = rootProject.version.toString()
         }

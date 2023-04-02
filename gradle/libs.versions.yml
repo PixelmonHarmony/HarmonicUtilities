@@ -96,6 +96,14 @@ dependencies:
     group: org.spongepowered
     name: configurate-hocon
     version: { ref: configurate }
+  configurateDfu4:
+      group: org.spongepowered
+      name: configurate-extra-dfu4
+      version: { ref: configurate }
+  configurateCore:
+    group: org.spongepowered
+    name: configurate-core
+    version: { ref: configurate }
 
   # fabric
   fabricApi:
